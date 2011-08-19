@@ -1,0 +1,106 @@
+# lines -- a game.
+# Copyright (C) 2000 Albertas Agejevas
+# Albertas Agejevas <alga@uosis.mif.vu.lt>, 2000
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: lines 1.0\n"
+"POT-Creation-Date: 2000-09-17 19:51+0200\n"
+"PO-Revision-Date: 2000-09-17 20:08+0200\n"
+"Last-Translator: Albertas Agejevas <alga@uosis.mif.vu.lt>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-13\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: hiscore.c:45
+msgid "Username"
+msgstr "Vartotojo vardas"
+
+#: hiscore.c:45
+msgid "Date"
+msgstr "Data"
+
+#: hiscore.c:45
+msgid "Score"
+msgstr "Taðkai"
+
+#: menu.c:16
+msgid "/_Game"
+msgstr "/_Þaidimas"
+
+#: menu.c:17
+msgid "/Game/_New"
+msgstr "/Þaidimas/_Naujas"
+
+#: menu.c:18
+msgid "/Game/_About"
+msgstr "/Þaidimas/_Apie"
+
+#: menu.c:19
+msgid "/Game/_Hiscore"
+msgstr "/Þaidimas/_Geriausi"
+
+#: menu.c:20
+msgid "/Game/_Redraw"
+msgstr "/Þaidimas/_Perpieðti"
+
+#: menu.c:21
+msgid "/Game/separator"
+msgstr "/Þaidimas/separator"
+
+#: menu.c:22
+msgid "/Game/_Quit"
+msgstr "/Þaidimas/_Iðeiti"
+
+#: menu.c:24
+msgid "/_Options"
+msgstr "_Pasirinktys"
+
+#: menu.c:25
+msgid "/Options/_Colours"
+msgstr "/Pasirinktys/_Spalvos"
+
+#: menu.c:26
+msgid "/Options/_Numbers"
+msgstr "/Pasirinktys/S_kaièiai"
+
+#: menu.c:26
+msgid "/Options/Colours"
+msgstr "/Pasirinktys/Spalvos"
+
+#: menu.c:27
+msgid "/Options/_Hints"
+msgstr "/Pasirinktys/_Uþuominos"
+
+#: menu.c:77
+msgid "OK"
+msgstr "Gerai"
+
+#: menu.c:78
+msgid ""
+"Lines\n"
+"\n"
+"This program is written by \n"
+"Albertas Agejevas\n"
+"\n"
+"Share and enjoy!"
+msgstr ""
+"Lines\n"
+"\n"
+"Ðità programà paraðë\n"
+"Albertas Agejevas\n"
+"\n"
+"Share and enjoy!"
+
+#: lines.c:76
+msgid "Score: 0"
+msgstr "Taðkai: 0"
+
+#: lines.c:204
+msgid "Score: %d"
+msgstr "Taðkai: %d"
+
+#: menu.c:122
+msgid "/Options/Hints"
+msgstr "/Pasirinktys/Uþuominos"
