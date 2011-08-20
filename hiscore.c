@@ -58,7 +58,7 @@ void show_hiscore()
     gtk_container_add(GTK_CONTAINER(GTK_DIALOG(hiscore)->vbox), list);
     gtk_container_add(GTK_CONTAINER(GTK_DIALOG(hiscore)->action_area), ok);
     gtk_window_set_modal(GTK_WINDOW(hiscore), TRUE);
-    gtk_signal_connect(GTK_OBJECT(ok), "clicked", hiscore_ok, hiscore);
+    gtk_signal_connect(GTK_OBJECT(ok), "clicked", (GCallback) hiscore_ok, hiscore);
  
     read_hiscore();
     gtk_widget_show_all(hiscore);    

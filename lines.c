@@ -82,9 +82,11 @@ int main(int argc, char *argv[])
     /* Score: 123456 */
     score_lab = gtk_label_new(_("Score: 0"));
     style = gtk_style_copy(score_lab->style);
+    /* font
     gdk_font_unref(style->font);
     style->font  =
 	gdk_font_load("-*-helvetica-*-r-*-*-24-*-*-*-*-*-*-*");
+    */
     col.red = 0;
     col.green = 0;
     col.blue = 65535;
@@ -96,9 +98,11 @@ int main(int argc, char *argv[])
     /* styles for the ball labels */
     for (i = 0; i < SIZE; i++) {
 	styles[i] = gtk_style_copy(score_lab->style);
+        /*
 	gdk_font_unref(styles[i]->font);
 	styles[i]->font =
 	    gdk_font_load("-adobe-courier-bold-r-*-*-24-*-*-*-*-*-*-*");
+        */
 /*  	colors[i].red = colors[i].blue = colors[i].green = i * 1000; */
 /*  	styles[i]->fg[GTK_STATE_NORMAL] = colors[i]; */
     }

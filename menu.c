@@ -1,6 +1,7 @@
 #include <gtk/gtk.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "menu.h"
 #include "lines.h"
 #include "hiscore.h"
@@ -84,7 +85,7 @@ static void about_cb(GtkWidget* w, gpointer data)
     GtkWidget *about;
     GtkWidget *ok, *box, *label;
 
-    about = gtk_window_new(GTK_WINDOW_DIALOG);
+    about = gtk_window_new(GTK_WINDOW_POPUP);
     gtk_window_set_position(GTK_WINDOW(about), GTK_WIN_POS_MOUSE);
     gtk_container_border_width(GTK_CONTAINER(about), 5);
     box = gtk_vbox_new(FALSE,2);
@@ -129,7 +130,7 @@ GtkWidget *menu_init(GtkWidget *window)
     gtk_item_factory_create_items(itemf, sizeof(menu_items) /
 				  sizeof(menu_items[0]), menu, NULL);
 
-    gtk_accel_group_attach(accel, GTK_OBJECT(window));
+    /* gtk_accel_group_attach(accel, GTK_OBJECT(window)); */
     
     w = gtk_item_factory_get_widget(itemf, _("/Options/Hints"));
     GTK_CHECK_MENU_ITEM(w)->active =  hints;
