@@ -485,4 +485,8 @@ static char * smallball6_xpm[] = {
 "  uvwxyz  ",
 "    AB    "};
 
+static char *(*smallballs[])[] = {&smallball1_xpm, &smallball2_xpm,
+                                  &smallball3_xpm, &smallball4_xpm,
+                                  &smallball5_xpm, &smallball6_xpm};
+
 #endif

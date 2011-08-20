@@ -1009,4 +1009,7 @@ static char * ball6_xpm[] = {
 "                9.0.a.b.c.d.                ",
 "                                            "};
 
+static char *(*balls[])[] = {&ball1_xpm, &ball2_xpm, &ball3_xpm, &ball4_xpm,
+                             &ball5_xpm, &ball6_xpm};
+
 #endif

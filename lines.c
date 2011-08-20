@@ -34,7 +34,7 @@ GtkWidget	*labels[SIZE][SIZE];
 
 /* Global flags */
 int		score = 0;
-int		hints = 1;
+int		hints = 0;
 
 /* The playing field and the balls to pop up next */
 int		field[SIZE][SIZE];
@@ -148,33 +148,13 @@ int main(int argc, char *argv[])
 
 void pixmaps_init(void)
 {
-    /* pixmaps of balls */
-    gpix[0] = gdk_pixmap_create_from_xpm_d(window->window, gmap,
-			&window->style->bg[GTK_STATE_NORMAL], ball1_xpm);
-    gpix[1] = gdk_pixmap_create_from_xpm_d(window->window, gmap + 1,
-			&window->style->bg[GTK_STATE_NORMAL], ball2_xpm);
-    gpix[2] = gdk_pixmap_create_from_xpm_d(window->window, gmap + 2,
-			&window->style->bg[GTK_STATE_NORMAL], ball3_xpm);
-    gpix[3] = gdk_pixmap_create_from_xpm_d(window->window, gmap + 3,
-			&window->style->bg[GTK_STATE_NORMAL], ball4_xpm);
-    gpix[4] = gdk_pixmap_create_from_xpm_d(window->window, gmap + 4,
-			&window->style->bg[GTK_STATE_NORMAL], ball5_xpm);
-    gpix[5] = gdk_pixmap_create_from_xpm_d(window->window, gmap + 5,
-			&window->style->bg[GTK_STATE_NORMAL], ball6_xpm);
-
-    /* pixmaps of small balls */
-    gsmallpix[0] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap,
-			&window->style->bg[GTK_STATE_NORMAL], smallball1_xpm);
-    gsmallpix[1] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap + 1,
-			&window->style->bg[GTK_STATE_NORMAL], smallball2_xpm);
-    gsmallpix[2] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap + 2,
-			&window->style->bg[GTK_STATE_NORMAL], smallball3_xpm);
-    gsmallpix[3] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap + 3,
-			&window->style->bg[GTK_STATE_NORMAL], smallball4_xpm);
-    gsmallpix[4] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap + 4,
-			&window->style->bg[GTK_STATE_NORMAL], smallball5_xpm);
-    gsmallpix[5] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap + 5,
-			&window->style->bg[GTK_STATE_NORMAL], smallball6_xpm);
+    int i;
+    for (i = 0; i < 6; i++) {
+        gpix[i] = gdk_pixmap_create_from_xpm_d(window->window, gmap,
+                      &window->style->bg[GTK_STATE_NORMAL], *balls[i]);
+        gsmallpix[i] = gdk_pixmap_create_from_xpm_d(window->window, gsmallmap,
+                      &window->style->bg[GTK_STATE_NORMAL], *smallballs[i]);
+    }
 }
 
 void pixmaps_free(void)
